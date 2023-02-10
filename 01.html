@@ -4,48 +4,193 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tengfei</title>
-  </head>
-  <body>
-    <div
-      style="
-        background-color: rgb(184, 122, 122);
+    <title>网页布局练习</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgb(235, 234, 234);
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .bianxian {
+        border: 1px solid rgb(173, 173, 173);
+      }
+      .flex {
+        display: flex;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .baise {
+        background-color: rgb(255, 255, 255);
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgb1 {
+        margin-bottom: 1px;
+      }
+      .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .juzhong {
         text-align: center;
-        height: 85px;
-        width: 795px;
-        padding: 2px;
-      "
-    >
-      <h1>欢迎来到我的第二个页面</h1>
-    </div>
-
-    <div style="position: relative; top: 10px; left: 0px;">
-      <a href="index.html">
-        <button
-          style="color: rgb(240, 136, 136); width: 260px; height: 60px; flex: %"
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px" class="baise yinYing">
+      <!-- 用户头像 -->
+      <div
+        style="height: 60px; align-items: center"
+        class="flex column baise yinYing mgb1"
+      >
+        <div class="flex" style="align-items: center; padding: 10px">
+          <img
+            alt="logo"
+            src="https://i.328888.xyz/2023/01/31/8Izvw.png"
+            height="40px"
+            width="40px"
+          />
+          <div style="margin-left: 0px">Tengfei_w</div>
+        </div>
+      </div>
+      <!-- 列表选项 -->
+      <div style="height: 40px" class="baise yinYing mgb1">
+        <a href="index.html"
+          ><button
+            style="height: 40px; width: 200px; border-style: none"
+            class="baise"
+          >
+            <p>搜索引擎入口</p>
+          </button></a
         >
-          <h2>回到主页</h2>
-        </button></a
-      >
+      </div>
+      <div style="height: 40px" class="baise yinYing mgb1">
+        <a href="https://huaban.com/follow"
+          ><button
+            style="height: 40px; width: 200px; border-style: none"
+            class="baise"
+          >
+            <p>花瓣网</p>
+          </button></a
+        >
+      </div>
+      <div style="height: 40px" class="baise yinYing mgb1">
+        <a href="https://www.zcool.com.cn/recommend"
+          ><button
+            style="height: 40px; width: 200px; border-style: none"
+            class="baise"
+          >
+            <p>站酷网</p>
+          </button></a
+        >
+      </div>
+      <div style="height: 40px" class="baise yinYing mgb1">
+        <a href="https://community-cn.eagle.cool/"
+          ><button
+            style="height: 40px; width: 200px; border-style: none"
+            class="baise"
+          >
+            <p>Eagle 资源社区</p>
+          </button></a
+        >
+      </div>
+      <div style="height: 40px" class="baise yinYing mgb1">
+        <a href="https://www.bilibili.com/"
+          ><button
+            style="height: 40px; width: 200px; border-style: none"
+            class="baise"
+          >
+            <p>bilibili</p>
+          </button></a
+        >
+      </div>
+      <div style="height: 40px" class="baise yinYing mgb1">
+        <a href="https://www.zhihu.com/"
+          ><button
+            style="height: 40px; width: 200px; border-style: none"
+            class="baise"
+          >
+            <p>知乎</p>
+          </button></a
+        >
+      </div>
     </div>
-    <!-- 这个是一段注释，这是一个按钮功能，非常基础#-# -->
-
-    <div style="position: relative; top: -50px; left: 270px">
-      <a href="https://huaban.com/">
-        <button style="color: rgb(240, 136, 136); width: 260px; height: 60px">
-          <h2>这是花瓣的传送门</h2>
-        </button></a
-      >
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 顶部栏 -->
+      <div style="height: 60px" class="baise yinYing"></div>
+      <!-- 内容栏 -->
+      <div class="flex flex1">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex">
+            <!-- 数据01 -->
+            <div style="height: 100px" class="flex1 yinYing baise mgr8 juzhong">
+              <div style="padding: 10px">
+                <h2 style="color: rgb(252, 136, 100)">目前只有图片展示</h2>
+              </div>
+            </div>
+            <!-- 数据02 -->
+            <div style="height: 100px" class="flex1 yinYing baise mgr8 juzhong">
+              <div style="padding: 10px">
+                <h2 style="color: rgb(252, 136, 100)">正在建设中。。。</h2>
+              </div>
+            </div>
+            <!-- 数据03 -->
+            <div style="height: 100px" class="flex1 yinYing baise mgr8"></div>
+            <!-- 数据04 -->
+            <div style="height: 100px" class="flex1 yinYing baise"></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <div style="height: 200px" class="baise mgt8 yinYing juzhong">
+              <div style="padding: 10px">
+                <a href="01.jpg"
+                  ><img alt="01" src="01.jpg" height="180" class="bianxian"
+                /></a>
+              </div>
+            </div>
+            <div style="height: 200px" class="baise mgt8 yinYing juzhong">
+              <div style="padding: 10px">
+                <a href="02.jpg"
+                  ><img alt="01" src="02.jpg" height="180" class="bianxian"
+                /></a>
+              </div>
+            </div>
+            <div style="height: 200px" class="baise mgt8 yinYing juzhong">
+              <div style="padding: 10px">
+                <a href="03.jpg"
+                  ><img alt="01" src="03.jpg" height="180" class="bianxian"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="baise yinYing mgt8 mgr8"></div>
+          <!-- 消息区 -->
+          <div style="height: 400px" class="baise yinYing mgt8 mgr8"></div>
+        </div>
+      </div>
     </div>
-    <!-- 这个是一段注释，这是一个按钮功能，非常基础#-# -->
-
-    <div style="position: relative; top: -110px; left: 540px;">
-      <a href="https://www.zcool.com.cn">
-        <button style="color: rgb(240, 136, 136); width: 260px; height: 60px">
-          <h2>这是站酷的传送门</h2>
-        </button></a
-      >
-    </div>
-    <!-- 这个是一段注释，这是一个按钮功能，非常基础#-# -->
   </body>
 </html>
